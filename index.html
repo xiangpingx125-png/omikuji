@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじ</title>
     <link rel="stylesheet" href="omikuji.css">
-    
 </head>
 <body>
     <h1>今日の運勢</h1>
+    <img id="result" src="" alt="">
     <button id="more">もう一回</button>
-    <img id ="result" src="" alt=""></img>
-    <script>
-    const omikuji = ["daikichi.png","chuukichi.png","suekichi.png","kyo.png"];
 
+    <script>
+    const omikuji = [
+        "daikichi.png",
+        "chuukichi.png",
+        "suekichi.png",
+        "kyo.png"
+    ];
 
     function drawomikuji() {
-        const no = Math.floor(Math.random()*omikuji.length);
+        const no = Math.floor(Math.random() * omikuji.length);
         document.getElementById('result').src = omikuji[no];
     }
-    drawomikuji();
 
-    document.getElementById('more').addEventListener('click',drawomikuji);    
+    drawomikuji();
+    document.getElementById('more').addEventListener('click', drawomikuji);
     </script>
 </body>
 </html>
-
-
